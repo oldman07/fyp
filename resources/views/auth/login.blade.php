@@ -2,8 +2,9 @@
 
     <!doctype html>
     <html lang="en">
-      <head>
-          <title>Login 10</title>
+
+    <head>
+        <title>Login 10</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,8 +14,9 @@
 
         <link rel="stylesheet" href="css/style.css">
 
-        </head>
-        <body class="img js-fullheight" background="{{ URL('images/bg.jpg') }}">
+    </head>
+
+    <body class="img js-fullheight" background="{{ URL('images/bg.jpg') }}">
         <section class="ftco-section">
             <div class="container">
                 <div class="row justify-content-center">
@@ -23,8 +25,8 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6 col-lg-4">
                         <div class="login-wrap p-0">
-                      <h3 class="mb-4 text-center">Have an account?</h3>
-                      {{-- <form action="#" class="signin-form">
+                            <h3 class="mb-4 text-center">Have an account?</h3>
+                            {{-- <form action="#" class="signin-form">
                           <div class="form-group">
                               <input type="text" class="form-control" placeholder="Username" required>
                           </div>
@@ -48,63 +50,66 @@
                     </div>
                   </form> --}}
 
-                  <form method="POST" action="{{ route('login') }}">
-                    @csrf
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
 
-                    <!-- Email Address -->
-                    <div>
-                        <x-input-label for="email" :value="__('Email')" />
+                                <!-- Email Address -->
+                                <div>
+                                    <x-input-label for="email" :value="__('Email')" />
 
-                        <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
+                                        :value="old('email')" required autofocus />
 
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
-                    </div>
+                                    <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                                </div>
 
-                    <!-- Password -->
-                    <div class="mt-4">
-                        <x-input-label for="password" :value="__('Password')" />
+                                <!-- Password -->
+                                <div class="mt-4">
+                                    <x-input-label for="password" :value="__('Password')" />
 
-                        <x-text-input id="password" class="block mt-1 w-full"
-                                        type="password"
-                                        name="password"
-                                        required autocomplete="current-password" />
+                                    <x-text-input id="password" class="block mt-1 w-full" type="password"
+                                        name="password" required autocomplete="current-password" />
 
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
-                    </div>
+                                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                                </div>
 
-                    <!-- Remember Me -->
-                    <div class="block mt-4">
-                        <label for="remember_me" class="inline-flex items-center">
-                            <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                            <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                        </label>
-                    </div>
+                                <!-- Remember Me -->
+                                <div class="block mt-4">
+                                    <label for="remember_me" class="inline-flex items-center">
+                                        <input id="remember_me" type="checkbox"
+                                            class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                            name="remember">
+                                        <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                                    </label>
+                                </div>
 
-                    <div class="flex items-center justify-end mt-4">
-                        @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                                {{ __('Forgot your password?') }}
-                            </a>
-                        @endif
+                                <div class="flex items-center justify-end mt-4">
+                                    @if (Route::has('password.request'))
+                                        <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                                            href="{{ route('password.request') }}">
+                                            {{ __('Forgot your password?') }}
+                                        </a>
+                                    @endif
 
-                        <x-primary-button class="ml-3">
-                            {{ __('Log in') }}
-                        </x-primary-button>
-                    </div>
-                </form>
+                                    <x-primary-button class="ml-3">
+                                        {{ __('Log in') }}
+                                    </x-primary-button>
+                                </div>
+                            </form>
 
-                  </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <script src="js/jquery.min.js"></script>
-      <script src="js/popper.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/main.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 
-        </body>
+    </body>
+
     </html>
 
 
@@ -164,4 +169,5 @@
             </div>
         </form>
     </x-auth-card> --}}
+
 </x-guest-layout>
